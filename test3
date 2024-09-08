@@ -1,0 +1,28 @@
+<?php
+
+function hitung($input, $query) {
+    $result = [];
+
+    foreach ($query as $q) {
+        $count = 0;
+        foreach ($input as $i) {
+            if ($i == $q) {
+                $count++;
+            }
+        }
+        $result[] = $count;
+    }
+
+    return $result;
+}
+
+$input = ['xc', 'dz', 'bbb', 'dz'];
+$query = ['bbb', 'ac', 'dz'];
+
+$result = hitung($input, $query);
+
+foreach ($result as $count) {
+    echo $count . "\n"; 
+}
+
+?>

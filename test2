@@ -1,0 +1,17 @@
+<?php
+
+function kataPanjang($kalimat) {
+    $kata = explode(" ", $kalimat);
+    
+    $kataPanjang = "";
+   
+    foreach ($kata as $k) {
+        if (strlen($k) > strlen($kataPanjang)) {
+            $kataPanjang = $k;
+        }
+    }
+    
+    return $kataPanjang;
+}
+$kalimat = "Saya sangat senang mengerjakan soal algoritma";
+echo kataPanjang($kalimat); 
